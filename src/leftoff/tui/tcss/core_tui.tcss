@@ -1,0 +1,150 @@
+Screen {
+    background: #0a0a0a;
+    color: #c8c8c8;
+}
+
+Header {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    text-style: bold;
+    dock: top;
+    height: 1;
+}
+
+#main {
+    layout: vertical;
+    height: 1fr;
+    padding: 0 1;
+}
+
+/* ========== STATISTICS ========== */
+#stats-box {
+    height: 4;
+    border: solid #3a3a3a;
+    background: #0a0a0a;
+}
+
+#stats-title {
+    text-align: center;
+    color: #909090;
+    height: 1;
+    width: 100%;
+}
+
+#stats-row {
+    height: 1;
+    layout: horizontal;
+    align: center middle;
+    padding: 0 1;
+}
+
+.stat {
+    width: 1fr;
+    text-align: center;
+    height: 1;
+}
+
+.stat-green  { color: #00ff66; }
+.stat-blue   { color: #00bfff; }
+.stat-red    { color: #ff5555; }
+.stat-yellow { color: #ffcc00; }
+
+/* ========== ACTIVE PROJECT TASKS ========== */
+#tasks-box {
+    height: 1fr;
+    border: solid #3a3a3a;
+    background: #0a0a0a;
+    margin-top: 0;
+}
+
+#tasks-title {
+    text-align: center;
+    color: #909090;
+    height: 1;
+    width: 100%;
+}
+
+#tables {
+    height: 1fr;
+    layout: horizontal;
+}
+
+ #features-panel, #issues-panel {
+     width: 1fr;
+     height: 1fr;
+     border: solid #2a2a2a;
+     background: #0a0a0a;
+ }
+
+ .panel-title {
+     text-align: center;
+     color: #d8d8d8;
+     background: #141414;
+     height: 1;
+     width: 100%;
+     text-style: bold;
+ }
+
+ DataTable {
+     height: 1fr;
+     background: #0a0a0a;
+     color: #c8c8c8;
+     scrollbar-size-vertical: 0;
+     scrollbar-size-horizontal: 0;
+ }
+
+ DataTable > .datatable--header {
+     background: #1a3a7a;
+     color: #ffffff;
+     text-style: bold;
+ }
+
+DataTable > .datatable--cursor {
+    background: #0d5a0d;
+    color: #ffffff;
+    text-style: bold;
+}
+
+DataTable > .datatable--hover {
+    background: #122212;
+}
+
+/* ========== COMMAND BAR ========== */
+#cmd-box {
+    height: 3;
+    border: solid #00aa88;
+    background: #0a0a0a;
+    margin: 0 1;
+    layout: horizontal;
+    align: left middle;
+    padding: 0 1;
+}
+
+#cmd-label {
+    color: #00ffaa;
+    width: auto;
+    padding-right: 1;
+}
+
+#cmd-input {
+    background: #0a0a0a;
+    color: #ffffff;
+    border: none;
+    width: 1fr;
+    padding: 0;
+}
+
+#cmd-input:focus {
+    border: none;
+    background: #0a0a0a;
+}
+
+/* ========== FOOTER ========== */
+#footer-bar {
+    dock: bottom;
+    height: 1;
+    background: #121212;
+    color: #808080;
+    text-align: center;
+    width: 100%;
+}

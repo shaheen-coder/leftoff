@@ -1,0 +1,26 @@
+[project]
+name = "leftoff"
+version = "0.1.0"
+description = "Cli tool for managing project works."
+readme = "README.md"
+authors = [
+    { name = "shaheen-coder", email = "shaheenvsa@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pytest>=9.1.1",
+    "textual>=8.2.8",
+]
+
+[tool.pyrefly]
+project-includes = [
+    "**/*.py*",
+    "**/*.ipynb",
+]
+
+[project.scripts]
+leftoff = "leftoff.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
