@@ -6,17 +6,27 @@
 
 A fast, keyboard-driven **CLI + TUI** for tracking project **features** and **issues** — right from your terminal.
 
+<!-- PyPI -->
+[![PyPI Version](https://img.shields.io/pypi/v/leftoff?style=flat&logo=pypi&logoColor=white)](https://pypi.org/project/leftoff/)
+[![PyPI Python Versions](https://img.shields.io/pypi/pyversions/leftoff?style=flat&logo=python&logoColor=white)](https://pypi.org/project/leftoff/)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/leftoff?style=flat&logo=pypi&logoColor=white)](https://pypi.org/project/leftoff/)
+
+<!-- GitHub Actions -->
+[![Publish](https://github.com/shaheen-coder/leftoff/actions/workflows/publish.yml/badge.svg)](https://github.com/shaheen-coder/leftoff/actions/workflows/publish.yml)
+
+<!-- Project -->
+[![License](https://img.shields.io/github/license/shaheen-coder/leftoff?style=flat)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/shaheen-coder/leftoff?style=flat&logo=github)](https://github.com/shaheen-coder/leftoff/stargazers)
+[![Issues](https://img.shields.io/github/issues/shaheen-coder/leftoff?style=flat)](https://github.com/shaheen-coder/leftoff/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/shaheen-coder/leftoff?style=flat)](https://github.com/shaheen-coder/leftoff/commits)
+
+<!-- Tooling -->
 [![Python](https://img.shields.io/badge/python-3.10+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![Textual](https://img.shields.io/badge/TUI-Textual-6C5CE7?style=flat)](https://github.com/Textualize/textual)
 [![Rich](https://img.shields.io/badge/CLI-Rich-FF6F61?style=flat)](https://github.com/Textualize/rich)
 [![uv](https://img.shields.io/badge/managed%20with-uv-DE5FE9?style=flat)](https://github.com/astral-sh/uv)
 [![pyrefly](https://img.shields.io/badge/type--checked-pyrefly-2ea44f?style=flat)](https://pyrefly.org/)
 [![pytest](https://img.shields.io/badge/tested%20with-pytest-0A9EDC?style=flat&logo=pytest&logoColor=white)](https://docs.pytest.org/)
-[![License](https://img.shields.io/github/license/shaheen-coder/leftoff?style=flat)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/shaheen-coder/leftoff?style=flat&logo=github)](https://github.com/shaheen-coder/leftoff/stargazers)
-[![Issues](https://img.shields.io/github/issues/shaheen-coder/leftoff?style=flat)](https://github.com/shaheen-coder/leftoff/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/shaheen-coder/leftoff?style=flat)](https://github.com/shaheen-coder/leftoff/commits)
-
 
 </div>
 
@@ -31,18 +41,6 @@ A fast, keyboard-driven **CLI + TUI** for tracking project **features** and **is
 
 ---
 
-## 📚 Table of Contents
-
-- [Features](#-features)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [TUI](#-tui)
-- [Development](#-development)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Built With](#-built-with)
-
----
 
 ## ✨ Features
 
