@@ -1,4 +1,8 @@
-
+'''
+                        CLI
+        this cli class handel leftoff json parser with cli arguments data.
+    
+'''
 # engine
 from leftoff.core.parser import LeftOffParser
 from leftoff.core.input_val import clean_args

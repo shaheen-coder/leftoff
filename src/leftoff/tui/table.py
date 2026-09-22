@@ -1,3 +1,7 @@
+'''
+                           Table Compoent ( TUI )
+                    this is general Table Compoent for both issue ans feature 
+'''
 from textual.widgets import DataTable
 from rich.text import Text
 

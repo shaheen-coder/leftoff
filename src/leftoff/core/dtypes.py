@@ -1,3 +1,8 @@
+'''
+                              DType
+        these are typing classes for json data structure  
+'''
+
 from typing import TypedDict,Literal
 
 

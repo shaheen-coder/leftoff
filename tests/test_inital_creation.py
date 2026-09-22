@@ -1,5 +1,11 @@
+'''
+                              PYTEST ( INIT )
+                    this test case for lefoff inital tool json creation func   
+'''
+# py 
 import json 
 from pathlib import Path
+# leftoff 
 from leftoff.core.dtypes import TodoJson
 
 def create_json(root_dir : Path) -> None :

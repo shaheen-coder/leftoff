@@ -1,4 +1,7 @@
-
+'''
+                               STATS
+                The stats class provide the task ( complete , in-complete and total) analysis 
+'''
 from leftoff.core.dtypes import StatsType,Table
 
 class Stats:

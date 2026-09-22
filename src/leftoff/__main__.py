@@ -1,4 +1,8 @@
-
+'''
+                            MAIN
+            Main cli runner file manage cli and tui 
+    
+'''
 # engine
 from leftoff.core.dtypes import StatsType # stats type dict 
 from leftoff.core.parser import LeftOffParser  # main todo engine 
@@ -15,6 +19,9 @@ import json
 import sys
 
 def create_base_json(root_dir : Path) -> None :
+    '''
+         creates inital `leftoff.json` with title and version get from user
+    '''
 
     title : str = input("Enter the Title : ")
     version : float = float(input("Enter your current version : "))

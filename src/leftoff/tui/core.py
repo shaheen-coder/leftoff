@@ -1,9 +1,14 @@
+'''
+                                   TUI CORE
+             this is core tui class for showing tui compoents
+'''
+# textual
 from textual.widgets import Header
 from textual.containers import Vertical,Horizontal
 from textual.app import App, ComposeResult
 from textual.widgets import Static
 from textual.containers import Container
-
+# leftoff 
 from leftoff.core.dtypes import Table,StatsType
 from leftoff.tui.table import GTable
 

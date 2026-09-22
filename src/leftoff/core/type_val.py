@@ -1,3 +1,8 @@
+'''
+                                Type Validator
+                This func validate the `leftoff` json dtype
+    
+'''
 from typing import Any
 
 

@@ -1,10 +1,15 @@
+'''
+                                  Left Off Parser ( core )
+                this is core `leftoff` json parser and writter.   
+'''
+
 from typing import Literal
 from pathlib import Path
 
 import json
 
-from leftoff.core.dtypes import TodoJson,Table,StatsType
-from leftoff.core.type_val import validate_todo,InvalidTodo
+from leftoff.core.dtypes import TodoJson,Table # datatyping 
+from leftoff.core.type_val import validate_todo,InvalidTodo # datatyping validator 
 
 class  LeftOffParser:
 
