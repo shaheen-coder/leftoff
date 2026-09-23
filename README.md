@@ -35,7 +35,7 @@ A fast, keyboard-driven **CLI + TUI** for tracking project **features** and **is
 ## 📸 Screenshot
 
 <p align="center">
-  <img src="assets/screenshot.png" alt="leftoff TUI screenshot" width="800">
+  <img src="assets/leftoff_sh.jpg" alt="leftoff TUI screenshot" width="800">
 </p>
 
 
