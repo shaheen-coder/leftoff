@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📝 leftoff
+# <img src="assets/leftoff_icon.png" alt="leftoff icon" width="75" valign="middle"> leftoff
 
 ### Never lose track of where you left off.
 
@@ -35,7 +35,7 @@ A fast, keyboard-driven **CLI + TUI** for tracking project **features** and **is
 ## 📸 Screenshot
 
 <p align="center">
-  <img src="assets/leftoff_header.png" alt="leftoff TUI screenshot" width="800">
+  <img src="assets/screenshot.png" alt="leftoff TUI screenshot" width="800">
 </p>
 
 
