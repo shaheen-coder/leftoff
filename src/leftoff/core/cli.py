@@ -10,7 +10,7 @@ from leftoff.core.input_val import clean_args
 from typing import Literal
 # py date and time lin 
 from datetime import datetime,timedelta
-
+import sys 
 
 class CLI:
 
@@ -20,6 +20,9 @@ class CLI:
                
     def add_task(self, mode : Literal['feat', 'issue'] , add_input_text : str) -> None :
         vals : list = clean_args(add_input_text)
+        if vals == [] :
+            print(f"Enter valid Input\nExample : 'task name,num of days' ( 'fix that,3')")
+            sys.exit(1)
         today = datetime.now().date()
         mode_id : int = self.engine.get_feat_id if mode == 'feat' else self.engine.get_issue_id
         self.engine.add_task(mode,[{
@@ -33,7 +36,9 @@ class CLI:
     def mod_task(self, mode : Literal['feat','issue'], mod_input_text : str ) -> int:
 
         vals : list = clean_args(mod_input_text)
-        
+        if vals == [] :
+            print(f"Enter valid Input\nExample : 'task name,num of days' ( 'fix that,3')")
+            sys.exit(1)
         self.engine.mod_status(mode,
                             task_id=int(vals[0]),
                             status=vals[1]
