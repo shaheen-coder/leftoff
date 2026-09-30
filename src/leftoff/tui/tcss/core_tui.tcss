@@ -1,8 +1,18 @@
 Screen {
+    layers: base overlay;
     background: #0a0a0a;
     color: #c8c8c8;
 }
-
+#header-date {
+    layer: overlay;
+    dock: right;
+    width: auto;
+    height: 1;
+    padding: 0 1;
+    background: #0a0a0a;
+    color: #ffaa00;
+    text-style: bold;
+}
 Header {
     background: #0a0a0a;
     color: #e0e0e0;
@@ -108,36 +118,7 @@ DataTable > .datatable--cursor {
 DataTable > .datatable--hover {
     background: #122212;
 }
-
-/* ========== COMMAND BAR ========== */
-#cmd-box {
-    height: 3;
-    border: solid #00aa88;
-    background: #0a0a0a;
-    margin: 0 1;
-    layout: horizontal;
-    align: left middle;
-    padding: 0 1;
-}
-
-#cmd-label {
-    color: #00ffaa;
-    width: auto;
-    padding-right: 1;
-}
-
-#cmd-input {
-    background: #0a0a0a;
-    color: #ffffff;
-    border: none;
-    width: 1fr;
-    padding: 0;
-}
-
-#cmd-input:focus {
-    border: none;
-    background: #0a0a0a;
-}
+# removed command cmd tcss ( never used on tui )
 
 /* ========== FOOTER ========== */
 #footer-bar {

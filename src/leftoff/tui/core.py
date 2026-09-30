@@ -11,6 +11,8 @@ from textual.containers import Container
 # leftoff 
 from leftoff.core.dtypes import Table,StatsType
 from leftoff.tui.table import GTable
+# py
+from datetime import datetime
 
 class TuiApp(App):
     CSS_PATH = "tcss/core_tui.tcss"
@@ -38,6 +40,7 @@ class TuiApp(App):
     def compose(self) -> ComposeResult:
         # Header
         yield Header(show_clock=False)
+        yield Static(self._date_text(),id="header-date")
 
         with Vertical(id="main") :            
             # --- STATS --
@@ -65,3 +68,5 @@ class TuiApp(App):
     def on_mount(self) -> None:
         self.query_one("#features-table", GTable).focus()
 
+    def _date_text(self) -> str : return datetime.now().strftime("📅 %A, %d %B %Y")
+    
