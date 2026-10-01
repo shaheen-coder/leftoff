@@ -1,6 +1,6 @@
 [project]
 name = "leftoff"
-version = "0.1.2"
+version = "0.1.3"
 description = "Cli tool for managing project works."
 readme = "README.md"
 authors = [
