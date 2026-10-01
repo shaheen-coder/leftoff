@@ -1,1 +1,1 @@
-{"title": "LeftOff", "version": 0.2, "mode": {"feat": [{"id": 1, "task": "test add", "status": "TODO", "due": "23-09-2026"}], "issue": []}}
+{"title": "LeftOff", "version": 0.2, "mode": {"feat": [{"id": 1, "task": "Data UI", "status": "DONE", "due": "29-09-2026"}], "issue": [{"id": 1, "task": "date on task", "status": "FIXIED", "due": "30-09-2026"}, {"id": 2, "task": "Tabel task space issue", "status": "TODO", "due": "30-09-2026"}, {"id": 3, "task": "if cli input struct fallback error", "status": "DONE", "due": "30-09-2026"}]}}
