@@ -28,10 +28,10 @@ class GTable(DataTable):
 
         self.table_data : list[Table] = table_data
 
-    def deadline_cell(self, due : Date ) -> Text :
+    def deadline_cell(self, due : Date , status : str) -> Text :
         days = ( due - Date.today()).days
-        if days < 0 : return Text(f'{due.day}-{due.month}',style="bold white on red")
-        if days == 0 : return Text(f'{due.day}-{due.month}',style="bold white on red")
+        if days < 0 and status not in ["DONE","FIXIED"] : return Text(f'{due.day}-{due.month}',style="bold white on red")
+        if days == 0 and status not in ["DONE","FIXIED"]: return Text(f'{due.day}-{due.month}',style="bold white on red")
         return Text(f"{due.day}-{due.month}",style="yellow")        
 
     def on_mount(self) -> None :
@@ -53,7 +53,7 @@ class GTable(DataTable):
                 str(item["id"]),
                 item["task"],
                 Text(f"[{item['status']}]", style=style),
-                self.deadline_cell(due_date),
+                self.deadline_cell(due_date, item['status']),
                 key=str(item["id"]),
             )
         self.move_cursor(row=0)
