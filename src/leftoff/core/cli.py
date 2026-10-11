@@ -51,4 +51,10 @@ class CLI:
         self.engine.rm_task(mode,task_id=task_id)
 
         self.engine.json_writer()
-        
+
+    def update_version(self, version : float ) -> None :
+
+        if isinstance(version, float):
+            self.engine.update_version(version)
+            self.engine.json_writer()
+        else : print("Enter a  Valid Version Number ")

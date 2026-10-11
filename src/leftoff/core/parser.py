@@ -81,3 +81,7 @@ class  LeftOffParser:
         # re-set task ids
         for i,task in enumerate(self.data['mode'][mode],start=1) : task['id'] = i
         
+    def update_version(self, version : float ) -> None :
+
+        self.data['version'] = version
+        

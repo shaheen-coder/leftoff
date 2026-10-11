@@ -76,6 +76,7 @@ def main() -> None :
     parser.add_argument("--add",type=str,help="add to task")
     parser.add_argument("--mod",type=str,help="Change the task status")
     parser.add_argument("--rm",type=int,help="Remove task")
+    parser.add_argument("--ver",type=float,help="Update the project verison info")
     args = parser.parse_args()
 
     if len(sys.argv) == 1 :
@@ -86,6 +87,10 @@ def main() -> None :
     cli_parser = CLI(engine)
 
     if args.tui: show_tui(engine)
+
+    if args.ver is not None  :
+        cli_parser.update_version(args.ver)
+        print(f"Project version update  to {args.ver}")
 
     # cli 
     
