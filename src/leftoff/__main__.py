@@ -64,11 +64,6 @@ def main() -> None :
 
     
     root_dir : Path = Path(".")
-    # if  leftover.json isnt in root everything falls apart
-    if not (root_dir / "leftoff.json").exists() :
-        create_base_json(root_dir)
-        print("\nGood Luck with project !!")
-        return
 
     parser = cli.ArgumentParser(description="Todo cli also support tui")
     parser.add_argument("--tui", action="store_true",help="show tui")
@@ -81,7 +76,18 @@ def main() -> None :
 
     if len(sys.argv) == 1 :
         print("To Know how to use it ? use ( --help )")
-        return 
+        return
+    
+    # if  leftover.json isnt in root everything falls apart
+    if not (root_dir / "leftoff.json").exists():
+        if len(sys.argv) > 2:
+            print("There is not leftoff project tracking here !!")
+            user_action = input("Do you want to initalize here ? (yes/no)")
+            if  user_action == "yes" : create_base_json(root_dir)
+            else : return
+        create_base_json(root_dir)
+        print("\nGood Luck with project !!")
+        return
     
     engine = LeftOffParser(root_dir)
     cli_parser = CLI(engine)
