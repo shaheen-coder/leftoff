@@ -25,15 +25,23 @@ name = "leftoff"
 version = "0.1.5"
 source = { editable = "." }
 dependencies = [
-    { name = "pytest" },
+    { name = "platformdirs" },
     { name = "textual" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "pytest", specifier = ">=9.1.1" },
+    { name = "platformdirs", specifier = ">=4.11.11" },
     { name = "textual", specifier = ">=8.2.8" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=9.1.1" }]
 
 [[package]]
 name = "linkify-it-py"

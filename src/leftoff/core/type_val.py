@@ -29,6 +29,8 @@ def validate_todo(data: Any) -> bool:
 
     if not isinstance(data.get("version"), (int, float)):
         return False
+    if not isinstance(data.get("description"), str):
+        return False
 
     mode = data.get("mode")
 

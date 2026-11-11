@@ -17,6 +17,7 @@ class Table(TypedDict):
 class TodoJson(TypedDict):
     title : str
     version : float
+    description : str 
     mode : dict[Literal["feat","issue"],list[Table]] 
     
 '''

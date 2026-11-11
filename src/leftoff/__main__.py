@@ -4,10 +4,20 @@
     
 '''
 # engine
+from leftoff.core.dtypes import TodoJson
 from leftoff.core.dtypes import StatsType # stats type dict 
 from leftoff.core.parser import LeftOffParser  # main todo engine 
 from leftoff.core.stats import Stats # statics of task 
-from leftoff.core.cli import CLI # cli manger 
+from leftoff.core.cli import CLI # cli manger
+# leftoff needle ai 
+from leftoff.needle_agent.utils import (
+        create_leftoff_base_json,
+        create_leftoff_dir
+)
+from leftoff.needle_agent.cli import AgentCLI
+from leftoff.needle_agent.dtypes import (
+        Projects
+)
 # tui 
 from leftoff.tui.core import TuiApp # core tui app 
 # py libs
@@ -18,15 +28,18 @@ import json
 # sys
 import sys
 
-def create_base_json(root_dir : Path) -> None :
-    '''
+def create_base_json(root_dir : Path) -> TodoJson:
+    ''' 
          creates inital `leftoff.json` with title and version get from user
+         Returns Project is metadata
     '''
 
     title : str = input("Enter the Title : ")
     version : float = float(input("Enter your current version : "))
-    data : dict = {
+    description : str = input("Enter the project description (short):")
+    data : TodoJson = {
                 "title" : title,
+                "description" : description,
                 "version": version,
                 "mode" : {
                     'feat'  : [],
@@ -36,6 +49,7 @@ def create_base_json(root_dir : Path) -> None :
 
     file : Path = root_dir / "leftoff.json"
     json.dump(data,file.open(mode='w'))
+    return data
 
 # tui
 def show_tui(l_engine):
@@ -61,7 +75,8 @@ def show_tui(l_engine):
     app.run()
 
 def main() -> None :
-
+    # needle ai agent 
+    ai_agent_cli = AgentCLI()
     
     root_dir : Path = Path(".")
 
@@ -83,9 +98,16 @@ def main() -> None :
         if len(sys.argv) > 2:
             print("There is not leftoff project tracking here !!")
             user_action = input("Do you want to initalize here ? (yes/no)")
-            if  user_action == "yes" : create_base_json(root_dir)
+            if  user_action == "yes" : base_data = create_base_json(root_dir)
             else : return
-        create_base_json(root_dir)
+        base_data = create_base_json(root_dir)
+        project_meta_data : Projects  = {
+            "name" : base_data.get("title"),
+            "description" : base_data.get("description"),
+            "path" : root_dir / "leftoff.json",
+            "version" : base_data.get("version")
+        }
+        ai_agent_cli.add_project(project_meta_data)
         print("\nGood Luck with project !!")
         return
     
