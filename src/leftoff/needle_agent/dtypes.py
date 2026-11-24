@@ -4,13 +4,13 @@ from pathlib import Path
 class Projects(TypedDict):
 
     name : str
-    version : float
+    version : str
     description : str 
     path : Path
 
  
 class DataJson(TypedDict):
-    version : float
+    version : str
 
     projects : list[Projects]
 

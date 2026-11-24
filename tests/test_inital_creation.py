@@ -11,7 +11,7 @@ from leftoff.core.dtypes import TodoJson
 def create_json(root_dir : Path) -> None :
     
     TITLE : str = "ShaProj"
-    VERSION : float = 1.0
+    VERSION : str = "1.0"
     DES : str = "A Json based project Tracking cli tool"
 
     data : TodoJson = {
@@ -38,7 +38,7 @@ def test_inital_leftoff_json(root_dir : Path):
         data : TodoJson = json.load(json_file)
 
         assert data['title'] == "ShaProj", "[INIT TEST] json title mismatch"
-        assert data['version'] == 1.0, "[INIT TEST] json version missmatch"
+        assert data['version'] == "1.0", "[INIT TEST] json version missmatch"
         assert data['description'] == "A Json based project Tracking cli tool", "[INIT TEST] Description mismatch"
         assert data['mode'] == {"feat" : [], "issue" : []}, "[INIT TEST] json mode structure error"
         assert data['mode']['feat'] == [] or data['mode']['issue'] == []  , "[INIT TEST] json modes inner structure error"

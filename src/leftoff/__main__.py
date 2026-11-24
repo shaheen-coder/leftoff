@@ -35,7 +35,7 @@ def create_base_json(root_dir : Path) -> TodoJson:
     '''
 
     title : str = input("Enter the Title : ")
-    version : float = float(input("Enter your current version : "))
+    version : str = input("Enter your current version : ")
     description : str = input("Enter the project description (short):")
     data : TodoJson = {
                 "title" : title,
@@ -81,6 +81,8 @@ def main() -> None :
     root_dir : Path = Path(".")
 
     parser = cli.ArgumentParser(description="Todo cli also support tui")
+    parser.add_argument("--init",action="store_true",help="initalize the leftoff")
+    parser.add_argument("--chat", action="store_true",help="Chat with ai")
     parser.add_argument("--tui", action="store_true",help="show tui")
     parser.add_argument("--mode",type=str,help="feature mode")
     parser.add_argument("--add",type=str,help="add to task")
@@ -92,6 +94,24 @@ def main() -> None :
     if len(sys.argv) == 1 :
         print("To Know how to use it ? use ( --help )")
         return
+    
+    # manual init
+    if args.init:
+        base_data = create_base_json(root_dir)
+        
+        project_meta_data : Projects  = {
+            "name" : base_data.get("title"),
+            "description" : base_data.get("description"),
+            "path" : root_dir / "leftoff.json",
+            "version" : base_data.get("version")
+        }
+        ai_agent_cli.add_project(project_meta_data)
+        print("\nGood Luck with project !!")
+        return
+    # needle agent chat mode
+    if args.chat:
+        chat_agent = AgentCLI()
+        chat_agent.chat()
     
     # if  leftover.json isnt in root everything falls apart
     if not (root_dir / "leftoff.json").exists():

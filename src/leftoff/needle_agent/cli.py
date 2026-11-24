@@ -4,6 +4,8 @@ from leftoff.needle_agent.utils import (
     create_leftoff_base_json
 )
 from leftoff.needle_agent.dtypes import Projects
+from leftoff.needle_agent.agent_fn import get_all_tools
+from needle import Needle
 
 class AgentCLI:
 
@@ -21,5 +23,18 @@ class AgentCLI:
         json_file['projects'].append(data)
 
     def chat(self) -> None :
+        needle_agent = Needle(
+            tools=get_all_tools()
+        )
 
-        pass
+        print("Chat with Leftoff AI ( type q or quit to exit)")
+        while True : # chat loop 
+
+            prompt = input("you : ")
+            if prompt in ["q", "quit"] : break
+            response = needle_agent.run(prompt)
+            print(f"AI : {response.get('results','')}")
+            # print("-"*50)
+            # print(response)
+            # print("-"*50)
+            needle_agent.reset()

@@ -25,9 +25,8 @@ def validate_todo(data: Any) -> bool:
         return False
 
     if not isinstance(data.get("title"), str):
-        return False
-
-    if not isinstance(data.get("version"), (int, float)):
+        return False 
+    if not isinstance(data.get("version"), (str)):
         return False
     if not isinstance(data.get("description"), str):
         return False

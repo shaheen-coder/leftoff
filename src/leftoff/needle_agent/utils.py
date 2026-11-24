@@ -23,11 +23,11 @@ def create_leftoff_base_json(file_path : Path ) -> None :
     this create a base leftoff json file in shared app dir
     '''
     data : DataJson = {
-        "version" : float(__version__),
+        "version" : __version__,
         "projects" : []
     }
 
-    json.dump(data,file_path.open())
+    json.dump(data,file_path.open(mode="w"))
     
 
     

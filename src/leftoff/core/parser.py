@@ -24,7 +24,7 @@ class  LeftOffParser:
 
         self.data : TodoJson  = self.json_reader()
         if not validate_todo(self.data):
-            raise InvalidTodo("Invalid todo.json format")
+            raise InvalidTodo("Invalid todo.json format on {}")
         
     def json_reader(self) -> TodoJson :
         
