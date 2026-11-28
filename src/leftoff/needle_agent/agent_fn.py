@@ -39,7 +39,9 @@ def projects_count() -> int:
 
 @needle.tool
 def get_project_info(project_name: str) -> str:
-    """Get the description and basic information of a project."""
+    """Get the description and basic information of a project. 
+    for the questions like what is the project project_name info ?
+    """
 
     project = find_project(project_name)
 

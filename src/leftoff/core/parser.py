@@ -39,7 +39,7 @@ class  LeftOffParser:
     
     def get_title(self) -> str : return self.data.get('title')
 
-    def get_version(self) -> float : return self.data.get("version")
+    def get_version(self) -> str : return self.data.get("version")
 
     def get_feat_table(self) -> list[Table] : return self.data['mode']['feat']
 
@@ -81,7 +81,7 @@ class  LeftOffParser:
         # re-set task ids
         for i,task in enumerate(self.data['mode'][mode],start=1) : task['id'] = i
         
-    def update_version(self, version : float ) -> None :
+    def update_version(self, version : str ) -> None :
 
         self.data['version'] = version
         

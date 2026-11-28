@@ -22,6 +22,9 @@ class AgentCLI:
 
         json_file['projects'].append(data)
 
+        with self.json_path.open(mode='w') as f:
+            json.dump(json_file,f,indent=4,default=str)
+
     def chat(self) -> None :
         needle_agent = Needle(
             tools=get_all_tools()

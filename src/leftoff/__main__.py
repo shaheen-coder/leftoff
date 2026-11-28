@@ -112,6 +112,7 @@ def main() -> None :
     if args.chat:
         chat_agent = AgentCLI()
         chat_agent.chat()
+        return sys.exit(0)
     
     # if  leftover.json isnt in root everything falls apart
     if not (root_dir / "leftoff.json").exists():
